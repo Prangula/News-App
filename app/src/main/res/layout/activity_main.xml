@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#212121"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/blue"
+        app:titleTextColor="@color/white"
+        app:title="NEWS"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+
+        <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search"
+            android:layout_gravity="center"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
+            android:padding="8dp"
+
+
+        />
+
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/baseline_search_24"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            />
+
+</FrameLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+
+        >
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           >
+
+           <android.widget.Button
+               android:id="@+id/btnAll"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:text="All"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+
+           <android.widget.Button
+               android:id="@+id/btnBusiness"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Business"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+           <android.widget.Button
+               android:id="@+id/btnEntertainment"
+               android:layout_width="130dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Entertainment"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+           <android.widget.Button
+               android:id="@+id/btnHealt"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Health"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+           <android.widget.Button
+               android:id="@+id/btnScience"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Science"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+           <android.widget.Button
+               android:id="@+id/btnSports"
+               android:layout_width="100dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Sports"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+           <android.widget.Button
+               android:id="@+id/btnTechnology"
+               android:layout_width="130dp"
+               android:layout_height="30dp"
+               android:background="@drawable/button"
+               android:layout_marginLeft="10dp"
+               android:text="Technology"
+               android:textColor="@color/white"
+               android:textStyle="bold"
+
+               />
+
+
+
+       </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue"
+        />
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_news"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    />
+
+
+
+
+
+</LinearLayout>

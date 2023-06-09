@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.newsapp.Constants.getTimeAgo
 import com.example.newsapp.databinding.ItemBinding
 import kotlinx.android.synthetic.main.item.*
 
@@ -61,7 +62,7 @@ class NewsAdapter(private val items: List<Articles>)
             holder.tvTitle.text = item.title
             holder.tvDescription.text = item.description
             holder.tvUrl.text = item.url
-            holder.tvPublished.text = item.publishedAt
+            holder.tvPublished.text = Constants.stringToDate(item.publishedAt).getTimeAgo()
             holder.tvAuthor.text = item.author
 
 
